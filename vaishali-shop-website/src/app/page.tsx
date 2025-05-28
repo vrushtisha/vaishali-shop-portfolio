@@ -4,6 +4,8 @@ import Head from 'next/head';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 
+
+
 export default function Home() {
   const router = useRouter();
   const [formData, setFormData] = useState({ name: '', number: '', message: '' });
@@ -216,9 +218,10 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="text-center mt-5 text-muted small">
-            © {new Date().getFullYear()} Vaishali Shah. All rights reserved.
-          </div>
+         <footer className="text-center mt-5 text-muted small">
+  © {new Date().getFullYear()} Vaishali Shah. All rights reserved.
+</footer>
+
         </div>
       </main>
     </>

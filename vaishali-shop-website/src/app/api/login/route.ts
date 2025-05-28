@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import jwt from 'jsonwebtoken';
 import connectToDatabase from '@/lib/mongo';
 import User from '@/lib/models/user';
-import bcrypt from 'bcryptjs'; // Add this
+import bcrypt from 'bcryptjs'; 
 
 const ADMIN_EMAIL = 'vaishali2709@gmail.com';
 const JWT_SECRET = process.env.JWT_SECRET!;
