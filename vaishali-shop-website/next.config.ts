@@ -1,8 +1,8 @@
-// next.config.js
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   eslint: {
-    ignoreDuringBuilds: true, 
+    // This disables ESLint during production builds (e.g., on Vercel)
+    ignoreDuringBuilds: true,
   },
 };
 
