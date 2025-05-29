@@ -41,6 +41,7 @@ export default function SignupPage() {
         setError(data.error || 'Signup failed');
       }
     } catch (err) {
+      console.error('Signup error:', err); // <-- used err here
       setError('Signup failed. Try again later.');
     }
   };
@@ -97,11 +98,7 @@ export default function SignupPage() {
       <div className="text-center mt-3">
         <p>
           Already have an account?{' '}
-          <a
-            href="/login"
-            className="text-primary"
-            style={{ cursor: 'pointer' }}
-          >
+          <a href="/login" className="text-primary" style={{ cursor: 'pointer' }}>
             Login
           </a>
         </p>

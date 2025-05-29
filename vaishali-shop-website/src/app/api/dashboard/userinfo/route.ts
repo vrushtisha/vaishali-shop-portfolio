@@ -7,6 +7,13 @@ interface JwtPayload {
   email: string;
 }
 
+interface UserType {
+  name: string;
+  email: string;
+  role: string;
+  createdAt?: Date;
+}
+
 export async function GET(request: Request) {
   try {
     await connectToDatabase();
@@ -20,7 +27,7 @@ export async function GET(request: Request) {
 
     let decoded: JwtPayload;
     try {
-      decoded = jwt.verify(token, process.env.JWT_SECRET || 'your_jwt_secret') as JwtPayload;
+      decoded = jwt.verify(token, process.env.JWT_SECRET!) as JwtPayload;
     } catch {
       return NextResponse.json({ error: 'Unauthorized: Invalid token' }, { status: 401 });
     }
@@ -30,7 +37,7 @@ export async function GET(request: Request) {
       return NextResponse.json({ error: 'Unauthorized: Invalid token payload' }, { status: 401 });
     }
 
-    const currentUser = await User.findOne({ email }).select('name email role').lean();
+    const currentUser = await User.findOne({ email }).select('name email role').lean<UserType>();
     if (!currentUser) {
       return NextResponse.json({ error: 'User not found' }, { status: 404 });
     }
@@ -39,11 +46,12 @@ export async function GET(request: Request) {
       return NextResponse.json({ error: 'Forbidden: Admin access only' }, { status: 403 });
     }
 
-    const users = await User.find({}, 'name email role createdAt').sort({ createdAt: -1 }).lean();
+    const users = await User.find({}, 'name email role createdAt')
+      .sort({ createdAt: -1 })
+      .lean<UserType[]>();
 
     return NextResponse.json({ users });
-  } catch (error) {
-    console.error('Error in userinfo API:', error);
+  } catch {
     return NextResponse.json({ error: 'Server error' }, { status: 500 });
   }
 }

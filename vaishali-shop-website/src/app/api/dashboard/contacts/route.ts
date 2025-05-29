@@ -28,7 +28,7 @@ export async function GET(request: Request) {
     const contacts = await Contact.find().sort({ createdAt: -1 });
 
     return NextResponse.json({ success: true, contacts });
-  } catch (error) {
+  } catch {
     return NextResponse.json({ success: false, error: 'Failed to fetch contacts' }, { status: 500 });
   }
 }

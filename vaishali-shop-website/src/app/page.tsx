@@ -1,10 +1,9 @@
 'use client';
 
 import Head from 'next/head';
+import Image from 'next/image'; // ✅ Import next/image
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-
-
 
 export default function Home() {
   const router = useRouter();
@@ -17,7 +16,6 @@ export default function Home() {
     setIsLoggedIn(!!token);
   }, []);
 
-  
   useEffect(() => {
     const handleAuthChange = () => {
       const token = localStorage.getItem('token');
@@ -99,13 +97,17 @@ export default function Home() {
             <h1 className="display-4 fw-bold text-success">Vaishali Shah</h1>
             <p className="fs-5">Senior Executive Director, Modicare</p>
 
-            <img
+            <Image
               src="/vaishali.jpg"
               alt="Vaishali Shah"
+              width={180}
+              height={180}
               className="rounded-circle img-thumbnail shadow-sm mb-3"
-              style={{ width: '180px', height: '180px', objectFit: 'cover' }}
+              style={{ objectFit: 'cover' }}
             />
           </div>
+
+
 
           <div className="row justify-content-center mb-4">
             <div className="col-md-8 text-center">
