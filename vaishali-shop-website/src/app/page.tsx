@@ -8,6 +8,7 @@ import { useRouter } from 'next/navigation';
 
 <Head>
   <title>Vaishali Shah - Modicare Consultant & Portfolio</title>
+  <meta name="google-site-verification" content="FAXNZl9E2mAYsm1vt38_9RZ560pX0zmoqBgDa6Rl7U4" />
   <meta name="description" content="Join Modicare, shop wellness products, and explore business opportunities with Vaishali Shah. Trusted Modicare direct seller." />
   <meta name="keywords" content="Vaishali Shah, Modicare, Modicare Consultant, Join Modicare, Modicare Products, Wellness Products India, Modicare Shop Online, Modicare Business Opportunity, Modicare Direct Seller" />
   <meta name="author" content="Vaishali Shah" />
