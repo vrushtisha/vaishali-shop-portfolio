@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://vaishali-shop-portfolio.vercel.app/sitemap.xml

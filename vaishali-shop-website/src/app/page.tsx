@@ -1,9 +1,26 @@
+//src/app/page.tsx
 'use client';
 
 import Head from 'next/head';
 import Image from 'next/image'; // ✅ Import next/image
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+
+<Head>
+  <title>Vaishali Shah - Modicare Consultant & Portfolio</title>
+  <meta name="description" content="Join Modicare, shop wellness products, and explore business opportunities with Vaishali Shah. Trusted Modicare direct seller." />
+  <meta name="keywords" content="Vaishali Shah, Modicare, Modicare Consultant, Join Modicare, Modicare Products, Wellness Products India, Modicare Shop Online, Modicare Business Opportunity, Modicare Direct Seller" />
+  <meta name="author" content="Vaishali Shah" />
+  <meta name="robots" content="index, follow" />
+
+  {/* Open Graph for social media */}
+  <meta property="og:title" content="Vaishali Shah - Modicare Consultant & Portfolio" />
+  <meta property="og:description" content="Explore Modicare products and business opportunities with Vaishali Shah." />
+  <meta property="og:url" content={process.env.NEXT_PUBLIC_BASE_URL || 'https://yourdomain.com'} />
+  <meta property="og:site_name" content="Vaishali Shah Modicare" />
+  <meta property="og:type" content="website" />
+</Head>
+
 
 export default function Home() {
   const router = useRouter();
