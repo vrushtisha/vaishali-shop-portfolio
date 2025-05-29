@@ -6,10 +6,10 @@ const ContactSchema = new mongoose.Schema({
     type: String, 
     required: true, 
     validate: {
-      validator: function(v) {
+      validator: function (v: string): boolean {
         return /^\d{10}$/.test(v);
       },
-      message: props => `${props.value} is not a valid 10-digit phone number!`
+      message: (props: { value: string }) => `${props.value} is not a valid 10-digit phone number!`
     }
   },
   message: { type: String, required: true },
