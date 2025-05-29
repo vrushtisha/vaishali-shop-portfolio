@@ -3,6 +3,10 @@ import connectToDatabase from '@/lib/mongo';
 import User from '@/lib/models/user';
 import jwt from 'jsonwebtoken';
 
+interface JwtPayload {
+  email: string;
+}
+
 export async function GET(request: Request) {
   try {
     await connectToDatabase();
@@ -14,10 +18,9 @@ export async function GET(request: Request) {
 
     const token = authHeader.substring(7);
 
- 
-    let decoded: any;
+    let decoded: JwtPayload;
     try {
-      decoded = jwt.verify(token, process.env.JWT_SECRET || 'your_jwt_secret');
+      decoded = jwt.verify(token, process.env.JWT_SECRET || 'your_jwt_secret') as JwtPayload;
     } catch {
       return NextResponse.json({ error: 'Unauthorized: Invalid token' }, { status: 401 });
     }
@@ -32,12 +35,10 @@ export async function GET(request: Request) {
       return NextResponse.json({ error: 'User not found' }, { status: 404 });
     }
 
-
     if (currentUser.role !== 'admin') {
       return NextResponse.json({ error: 'Forbidden: Admin access only' }, { status: 403 });
     }
 
-    
     const users = await User.find({}, 'name email role createdAt').sort({ createdAt: -1 }).lean();
 
     return NextResponse.json({ users });
