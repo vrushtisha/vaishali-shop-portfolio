@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Head from 'next/head';
 
 interface UserInfo {
   name: string;
@@ -48,22 +49,29 @@ export default function UserInfoPage() {
   if (error) return <p style={{ color: 'red' }}>{error}</p>;
 
   return (
-    <div className="container mt-4">
-      <h1>Registered Users</h1>
-      {users.length > 0 ? (
-        <ul className="list-group" style={{ maxWidth: '600px' }}>
-          {users.map((user, index) => (
-            <li key={index} className="list-group-item">
-              <strong>Name:</strong> {user.name}<br />
-              <strong>Email:</strong> {user.email}<br />
-              <strong>Role:</strong> {user.role}<br />
-              <strong>Joined:</strong> {new Date(user.createdAt).toLocaleString()}
-            </li>
-          ))}
-        </ul>
-      ) : (
-        <p>No users found.</p>
-      )}
-    </div>
+    <>
+      <Head>
+        <title>Registered Users - MyApp</title>
+        <meta name="robots" content="noindex, nofollow" />
+      </Head>
+
+      <div className="container mt-4">
+        <h1>Registered Users</h1>
+        {users.length > 0 ? (
+          <ul className="list-group" style={{ maxWidth: '600px' }}>
+            {users.map((user, index) => (
+              <li key={index} className="list-group-item">
+                <strong>Name:</strong> {user.name}<br />
+                <strong>Email:</strong> {user.email}<br />
+                <strong>Role:</strong> {user.role}<br />
+                <strong>Joined:</strong> {new Date(user.createdAt).toLocaleString()}
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p>No users found.</p>
+        )}
+      </div>
+    </>
   );
 }

@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Head from 'next/head';
 
 interface Contact {
   _id: string;
@@ -49,32 +50,39 @@ export default function ContactsPage() {
   if (error) return <p style={{ color: 'red' }}>{error}</p>;
 
   return (
-    <div className="container mt-4">
-      <h1>Contact Details</h1>
-      {contacts.length === 0 ? (
-        <p>No contacts found.</p>
-      ) : (
-        <table className="table table-bordered">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Email</th>
-              <th>Message</th>
-              <th>Received At</th>
-            </tr>
-          </thead>
-          <tbody>
-            {contacts.map((contact) => (
-              <tr key={contact._id}>
-                <td>{contact.name}</td>
-                <td>{contact.email}</td>
-                <td>{contact.message}</td>
-                <td>{new Date(contact.createdAt).toLocaleString()}</td>
+    <>
+      <Head>
+        <title>Contact Details - MyApp</title>
+        <meta name="robots" content="noindex, nofollow" />
+      </Head>
+
+      <div className="container mt-4">
+        <h1>Contact Details</h1>
+        {contacts.length === 0 ? (
+          <p>No contacts found.</p>
+        ) : (
+          <table className="table table-bordered">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Message</th>
+                <th>Received At</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
-      )}
-    </div>
+            </thead>
+            <tbody>
+              {contacts.map((contact) => (
+                <tr key={contact._id}>
+                  <td>{contact.name}</td>
+                  <td>{contact.email}</td>
+                  <td>{contact.message}</td>
+                  <td>{new Date(contact.createdAt).toLocaleString()}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        )}
+      </div>
+    </>
   );
 }

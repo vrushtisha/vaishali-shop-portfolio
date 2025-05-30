@@ -2,26 +2,9 @@
 'use client';
 
 import Head from 'next/head';
-import Image from 'next/image'; // ✅ Import next/image
+import Image from 'next/image'; 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-
-<Head>
-  <title>Vaishali Shah - Modicare Consultant & Portfolio</title>
-  <meta name="google-site-verification" content="FAXNZl9E2mAYsm1vt38_9RZ560pX0zmoqBgDa6Rl7U4" />
-  <meta name="description" content="Join Modicare, shop wellness products, and explore business opportunities with Vaishali Shah. Trusted Modicare direct seller." />
-  <meta name="keywords" content="Vaishali Shah, Modicare, Modicare Consultant, Join Modicare, Modicare Products, Wellness Products India, Modicare Shop Online, Modicare Business Opportunity, Modicare Direct Seller" />
-  <meta name="author" content="Vaishali Shah" />
-  <meta name="robots" content="index, follow" />
-
-  {/* Open Graph for social media */}
-  <meta property="og:title" content="Vaishali Shah - Modicare Consultant & Portfolio" />
-  <meta property="og:description" content="Explore Modicare products and business opportunities with Vaishali Shah." />
-  <meta property="og:url" content={process.env.NEXT_PUBLIC_BASE_URL || 'https://yourdomain.com'} />
-  <meta property="og:site_name" content="Vaishali Shah Modicare" />
-  <meta property="og:type" content="website" />
-</Head>
-
 
 export default function Home() {
   const router = useRouter();
@@ -88,16 +71,26 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Vaishali Shah | Modicare Mentor & Shop</title>
+        <title>Vaishali Shah - Modicare Consultant & Portfolio</title>
+        <meta name="google-site-verification" content="FAXNZl9E2mAYsm1vt38_9RZ560pX0zmoqBgDa6Rl7U4" />
         <meta
           name="description"
-          content="Vaishali Shah - Senior Executive Director at Modicare. Visit the shop or join the journey to financial freedom with Modicare."
+          content="Join Modicare, shop wellness products, and explore business opportunities with Vaishali Shah. Trusted Modicare direct seller."
         />
         <meta
           name="keywords"
-          content="Modicare, Vaishali Shah, Modicare Shop, Join Modicare, Direct Selling India, Entrepreneurs"
+          content="Vaishali Shah, Modicare, Modicare Consultant, Join Modicare, Modicare Products, Wellness Products India, Modicare Shop Online, Modicare Business Opportunity, Modicare Direct Seller"
         />
         <meta name="author" content="Vaishali Shah" />
+        <meta name="robots" content="index, follow" />
+
+        {/* Open Graph for social media */}
+        <meta property="og:title" content="Vaishali Shah - Modicare Consultant & Portfolio" />
+        <meta property="og:description" content="Explore Modicare products and business opportunities with Vaishali Shah." />
+        <meta property="og:url" content={process.env.NEXT_PUBLIC_BASE_URL || 'https://yourdomain.com'} />
+        <meta property="og:site_name" content="Vaishali Shah Modicare" />
+        <meta property="og:type" content="website" />
+
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -105,6 +98,7 @@ export default function Home() {
         />
       </Head>
 
+      {/* Rest of your existing JSX stays the same */}
       <main className="bg-white text-dark py-5">
         <div className="container">
           <div className="alert alert-success text-center">
