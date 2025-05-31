@@ -82,7 +82,7 @@ export default function Home() {
 
   <meta
     name="keywords"
-    content="Vaishali Shah, Modicare, Modicare Consultant, Join Modicare, Modicare Products, Wellness Products India, Modicare Shop Online, Modicare Business Opportunity, Modicare Direct Seller, Modicare Bhuj, Modicare Products Bhuj, Modicare Consultant Bhuj"
+    content="Vaishali Shah, Modicare, Modicare Consultant, Join Modicare, Modicare Products, Wellness Products India, Modicare Shop Online, Modicare Business Opportunity, Modicare Direct Seller, Modicare Bhuj, Modicare Products Bhuj, Modicare Consultant Bhuj, Modicare DP Bhuj, Modicare DP"
   />
 
   <meta name="author" content="Vaishali Shah" />
