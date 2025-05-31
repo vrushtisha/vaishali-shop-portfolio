@@ -71,32 +71,39 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Vaishali Shah - Modicare Consultant & Portfolio</title>
-        <meta name="google-site-verification" content="FAXNZl9E2mAYsm1vt38_9RZ560pX0zmoqBgDa6Rl7U4" />
-        <meta
-          name="description"
-          content="Join Modicare, shop wellness products, and explore business opportunities with Vaishali Shah. Trusted Modicare direct seller."
-        />
-        <meta
-          name="keywords"
-          content="Vaishali Shah, Modicare, Modicare Consultant, Join Modicare, Modicare Products, Wellness Products India, Modicare Shop Online, Modicare Business Opportunity, Modicare Direct Seller"
-        />
-        <meta name="author" content="Vaishali Shah" />
-        <meta name="robots" content="index, follow" />
+  <title>Vaishali Shah - Modicare Consultant & Portfolio | Wellness Products & Business Opportunity</title>
 
-        {/* Open Graph for social media */}
-        <meta property="og:title" content="Vaishali Shah - Modicare Consultant & Portfolio" />
-        <meta property="og:description" content="Explore Modicare products and business opportunities with Vaishali Shah." />
-        <meta property="og:url" content={process.env.NEXT_PUBLIC_BASE_URL || 'https://yourdomain.com'} />
-        <meta property="og:site_name" content="Vaishali Shah Modicare" />
-        <meta property="og:type" content="website" />
+  <meta name="google-site-verification" content="FAXNZl9E2mAYsm1vt38_9RZ560pX0zmoqBgDa6Rl7U4" />
 
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link
-          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-          rel="stylesheet"
-        />
-      </Head>
+  <meta
+    name="description"
+    content="Join Modicare, shop wellness products, and explore business opportunities with Vaishali Shah. Trusted Modicare direct seller available across India, including Bhuj."
+  />
+
+  <meta
+    name="keywords"
+    content="Vaishali Shah, Modicare, Modicare Consultant, Join Modicare, Modicare Products, Wellness Products India, Modicare Shop Online, Modicare Business Opportunity, Modicare Direct Seller, Modicare Bhuj, Modicare Products Bhuj, Modicare Consultant Bhuj"
+  />
+
+  <meta name="author" content="Vaishali Shah" />
+  <meta name="robots" content="index, follow" />
+
+  {/* Open Graph for social media */}
+  <meta property="og:title" content="Vaishali Shah - Modicare Consultant & Portfolio" />
+  <meta
+    property="og:description"
+    content="Explore Modicare products and business opportunities with Vaishali Shah. Trusted direct seller serving India including Bhuj."
+  />
+  <meta property="og:url" content={process.env.NEXT_PUBLIC_BASE_URL || 'https://yourdomain.com'} />
+  <meta property="og:site_name" content="Vaishali Shah Modicare" />
+  <meta property="og:type" content="website" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+</Head>
 
       {/* Rest of your existing JSX stays the same */}
       <main className="bg-white text-dark py-5">
