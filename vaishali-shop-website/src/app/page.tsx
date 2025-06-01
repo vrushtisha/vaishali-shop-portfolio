@@ -1,8 +1,8 @@
-//src/app/page.tsx
+// src/app/page.tsx
 'use client';
 
 import Head from 'next/head';
-import Image from 'next/image'; 
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 
@@ -31,7 +31,6 @@ export default function Home() {
     e.preventDefault();
 
     const phone = formData.number.trim();
-
     if (!/^\d{10}$/.test(phone)) {
       alert('Please enter a valid 10-digit phone number.');
       return;
@@ -71,41 +70,55 @@ export default function Home() {
   return (
     <>
       <Head>
-  <title>Vaishali Shah - Modicare Consultant & Portfolio | Wellness Products & Business Opportunity</title>
+        <title>Vaishali Shah - Modicare Consultant in India | Buy Modicare Products Online | Join Business</title>
+        <meta name="google-site-verification" content="FAXNZl9E2mAYsm1vt38_9RZ560pX0zmoqBgDa6Rl7U4" />
+        <meta
+          name="description"
+          content="Meet Vaishali Shah, Senior Modicare Consultant in Bhuj, India. Buy Modicare wellness products online and start your Modicare business today with expert mentorship and full support."
+        />
+        <meta
+          name="keywords"
+          content="Modicare, Vaishali Shah, Modicare Bhuj, Buy Modicare Products Online, Modicare Shop, Join Modicare Business, Modicare Consultant India, Direct Seller Modicare, Modicare DP, Modicare Products Bhuj, Modicare Mentorship, Modicare Home Business, Work From Home India"
+        />
+        <meta name="author" content="Vaishali Shah" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content="Vaishali Shah - Modicare Business & Products in India" />
+        <meta
+          property="og:description"
+          content="Buy Modicare products and build your Modicare business with Vaishali Shah. Trusted Consultant in Bhuj, India with 100+ mentees."
+        />
+        <meta property="og:url" content={process.env.NEXT_PUBLIC_BASE_URL || 'https://yourdomain.com'} />
+        <meta property="og:site_name" content="Vaishali Shah Modicare India" />
+        <meta property="og:type" content="website" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-  <meta name="google-site-verification" content="FAXNZl9E2mAYsm1vt38_9RZ560pX0zmoqBgDa6Rl7U4" />
+        <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Vaishali Shah",
+      "jobTitle": "Senior Executive Director - Modicare India",
+      "url": process.env.NEXT_PUBLIC_BASE_URL || "https://vaishali-shop-portfolio.vercel.app/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Odhav Avenue 2, Opp. Kataria Complex, Near Pramukh Swami Nagar",
+        "addressLocality": "Bhuj",
+        "addressRegion": "Gujarat",
+        "postalCode": "370001",
+        "addressCountry": "IN"
+      },
+      "telephone": "+918758274909",
+      "image": "https://vaishali-shop-portfolio.vercel.app/vaishali.jpg",
+      "description": "Meet Vaishali Shah, Senior Modicare Consultant in Bhuj, India. Buy Modicare wellness products online and start your Modicare business today with expert mentorship and full support."
+    }),
+  }}
+/>
 
-  <meta
-    name="description"
-    content="Join Modicare, shop wellness products, and explore business opportunities with Vaishali Shah. Trusted Modicare direct seller available across India, including Bhuj."
-  />
+      </Head>
 
-  <meta
-    name="keywords"
-    content="Vaishali Shah, Modicare, Modicare Consultant, Join Modicare, Modicare Products, Wellness Products India, Modicare Shop Online, Modicare Business Opportunity, Modicare Direct Seller, Modicare Bhuj, Modicare Products Bhuj, Modicare Consultant Bhuj, Modicare DP Bhuj, Modicare DP"
-  />
-
-  <meta name="author" content="Vaishali Shah" />
-  <meta name="robots" content="index, follow" />
-
-  {/* Open Graph for social media */}
-  <meta property="og:title" content="Vaishali Shah - Modicare Consultant & Portfolio" />
-  <meta
-    property="og:description"
-    content="Explore Modicare products and business opportunities with Vaishali Shah. Trusted direct seller serving India including Bhuj."
-  />
-  <meta property="og:url" content={process.env.NEXT_PUBLIC_BASE_URL || 'https://yourdomain.com'} />
-  <meta property="og:site_name" content="Vaishali Shah Modicare" />
-  <meta property="og:type" content="website" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
-</Head>
-
-      {/* Rest of your existing JSX stays the same */}
       <main className="bg-white text-dark py-5">
         <div className="container">
           <div className="alert alert-success text-center">
@@ -114,11 +127,11 @@ export default function Home() {
 
           <div className="text-center mb-5">
             <h1 className="display-4 fw-bold text-success">Vaishali Shah</h1>
-            <p className="fs-5">Senior Executive Director, Modicare</p>
+            <h2 className="fs-5">Senior Executive Director - Modicare India</h2>
 
             <Image
               src="/vaishali.jpg"
-              alt="Vaishali Shah"
+              alt="Vaishali Shah - Modicare Consultant Bhuj"
               width={180}
               height={180}
               className="rounded-circle img-thumbnail shadow-sm mb-3"
@@ -126,20 +139,17 @@ export default function Home() {
             />
           </div>
 
-
-
           <div className="row justify-content-center mb-4">
             <div className="col-md-8 text-center">
+              <h3 className="text-success">💼 Modicare Success Story</h3>
               <p className="lead">
-                From a dedicated housewife to a successful entrepreneur, Vaishali Shah has transformed her life through
-                <strong> Modicare</strong>. Passion, resilience, and vision have helped hundreds build their own businesses.
+                From a homemaker to a top Modicare entrepreneur, <strong>Vaishali Shah</strong> is now a leading consultant in Bhuj, India. Her journey proves the power of passion and proper mentorship.
               </p>
               <p>
-                Achieved <strong>all-expense-paid luxury trips</strong> to <strong>Dubai</strong>, <strong>Thailand</strong>,
-                and <strong>Pattaya</strong> — all through outstanding performance in <strong>Modicare</strong>.
+                She has earned <strong>international Modicare trips</strong> to Dubai, Thailand, and Pattaya through her outstanding business performance.
               </p>
               <p>
-                This story proves that anyone—regardless of background—can create financial freedom with the right guidance.
+                Join Modicare under her <strong>step-by-step mentorship</strong> and transform your life with India’s most trusted direct-selling opportunity.
               </p>
             </div>
           </div>
@@ -148,41 +158,37 @@ export default function Home() {
             <div className="col-md-6">
               <div className="card border-0 shadow-sm">
                 <div className="card-body">
-                  <h5 className="card-title text-success">🏆 Achievements</h5>
+                  <h3 className="card-title text-success">🏆 Modicare Achievements</h3>
                   <ul className="list-group list-group-flush">
-                    <li className="list-group-item">Earned Modicare-sponsored luxury trips to Dubai, Thailand, and Pattaya</li>
-                    <li className="list-group-item">Built a thriving Modicare network across India</li>
-                    <li className="list-group-item">Mentored 100+ new entrepreneurs</li>
-                    <li className="list-group-item">Maintained 200+ loyal customers through trust and consistent service</li>
+                    <li className="list-group-item">All-expense-paid luxury trips to Dubai, Thailand & Pattaya</li>
+                    <li className="list-group-item">Built a 1000+ member strong Modicare network across India</li>
+                    <li className="list-group-item">Mentored 100+ entrepreneurs to start their Modicare journey</li>
+                    <li className="list-group-item">Retained 200+ loyal customers through personalized service</li>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
 
-       
           <div className="text-center mb-4" id="products">
             <a
               href="#"
               onClick={handleShopVisit}
               className="btn btn-lg btn-success px-5 py-2"
+              aria-label="Shop Modicare Products"
             >
-              🛍️ Visit the Modicare Shop
+              🛍️ Shop Modicare Products Online
             </a>
           </div>
 
-          
           <div id="contact" className="row justify-content-center">
             <div className="col-md-6">
-              <h4 className="text-success">💬 Contact to Join</h4>
-              <form
-                onSubmit={handleSubmit}
-                method="POST"
-                className="border p-3 rounded bg-light"
-              >
+              <h3 className="text-success">📩 Contact to Join Modicare</h3>
+              <form onSubmit={handleSubmit} method="POST" className="border p-3 rounded bg-light">
                 <div className="mb-3">
-                  <label className="form-label">Your Name</label>
+                  <label htmlFor="name" className="form-label">Your Name</label>
                   <input
+                    id="name"
                     type="text"
                     name="name"
                     className="form-control"
@@ -193,8 +199,9 @@ export default function Home() {
                 </div>
 
                 <div className="mb-3">
-                  <label className="form-label">Phone Number</label>
+                  <label htmlFor="number" className="form-label">Phone Number</label>
                   <input
+                    id="number"
                     type="text"
                     name="number"
                     className="form-control"
@@ -211,8 +218,9 @@ export default function Home() {
                 </div>
 
                 <div className="mb-3">
-                  <label className="form-label">Message</label>
+                  <label htmlFor="message" className="form-label">Message</label>
                   <textarea
+                    id="message"
                     name="message"
                     className="form-control"
                     rows={3}
@@ -221,28 +229,36 @@ export default function Home() {
                   />
                 </div>
 
-                <button type="submit" className="btn btn-success">Submit</button>
+                <button type="submit" className="btn btn-success" aria-label="Submit contact form">Submit</button>
               </form>
 
               {status && <div className="alert alert-info mt-3">{status}</div>}
 
-              <div className="text-center mt-3">
+              <div className="text-center mt-4">
+                <p className="mb-2 fw-bold">📍 Address</p>
+                <p>
+                  Odhav Avenue 2,<br />
+                  Opp. Kataria Complex,<br />
+                  Near Pramukh Swami Nagar,<br />
+                  Bhuj, Gujarat, India - 370001
+                </p>
+
                 <a
                   href="https://wa.me/918758274909"
-                  className="btn btn-outline-success"
+                  className="btn btn-outline-success mt-2"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Chat on WhatsApp with Vaishali Shah"
                 >
-                  💬 Chat on WhatsApp
+                  💬 Chat on WhatsApp with Vaishali
                 </a>
               </div>
             </div>
           </div>
 
-         <footer className="text-center mt-5 text-muted small">
-  © {new Date().getFullYear()} Vaishali Shah. All rights reserved.
-</footer>
-
+          <footer className="text-center mt-5 text-muted small">
+            © {new Date().getFullYear()} Vaishali Shah - Modicare Consultant India. All rights reserved.
+          </footer>
         </div>
       </main>
     </>
